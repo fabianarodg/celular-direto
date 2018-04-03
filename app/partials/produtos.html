@@ -25,7 +25,7 @@
         <div class="card-footer">
             <h4 class="font-sz-5">{{produto.aparelho.numeroParcelas}}x 
                 R$ {{produto.aparelho.valorParcela || produto.aparelho.valor}}</h4>
-              <md-button ng-click="Produtos.escolher(plataforma)">Quero este!</md-button>
+              <md-button ng-click="Produtos.escolher(plataforma)" class="md-raised md-warn">Quero este!</md-button>
         </div>
       </div>
       <div class="card-footer" ng-if="!produto.aparelho" layout-align="start center">
