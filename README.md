@@ -10,7 +10,7 @@ Desenvolvi este teste com técnicas bem simples, que mostrem um pouco da minha l
 Para iniciar, você precisa clonar este projeto:
 
 ```
-git clone https://github.com/angular/angular-seed.git
+git clone https://github.com/fabianarodg/celular-direto.git
 ```
 
 ## Rodando o projeto 
