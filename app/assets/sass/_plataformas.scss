@@ -1,0 +1,22 @@
+.plataformas {
+    margin: 30px 0;
+    h1 {
+        text-align: center;
+    }
+    .plataformas-opt {
+        display: flex;
+        flex-direction: row;
+        .plataformas-card {
+            padding: 15px;
+            background: #c82482;
+            color: #FFF;
+            -webkit-transition: all .2s ease;
+            -webkit-transition: all .25s ease-out 0s;
+            transition: all .25s ease-out 0s;
+            &:hover {
+                background: #ffd900;
+                color: #222;
+            }
+        }
+    }
+}

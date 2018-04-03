@@ -1,0 +1,17 @@
+.produtos-card {
+    padding: 15px;
+    background: #ffd900;
+    color: #222;
+    -webkit-transition: all .2s ease;
+    -webkit-transition: all .25s ease-out 0s;
+    transition: all .25s ease-out 0s;
+    &:hover {
+        background: #c82482;
+        color: #fff;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 40px;
+    }
+}

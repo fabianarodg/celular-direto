@@ -1,0 +1,35 @@
+@import "mixins/sizing";
+@import "page";
+@import "card";
+@import "prehome";
+@import "plataformas";
+@import "produtos";
+
+body {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    margin: 0;
+}
+.gradient {
+    color: #FFF;
+    background: -webkit-linear-gradient(130deg, #0dcab7, #2b0a70);
+    background: -moz-linear-gradient(130deg, #0dcab7, #2b0a70);
+}
+
+.muted {
+    color: #666;
+}
+
+.fore-color {
+    color: #2b0a70;
+}
+
+.bg-color {
+    color: #0dcab7;
+}

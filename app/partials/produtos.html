@@ -1,0 +1,37 @@
+<div class="page">
+  <section class="page-header gradient">
+    <div class="page-header__menu"></div>
+    <h1 class="page-header__title font-sz-8">{{Produtos.title}}</h1>
+  </section>
+
+  <div class="page-body" layout="row" layout-align="center center">
+    
+    <md-whiteframe class="md-whiteframe-3dp card" ng-if="produto.ativo"
+    ng-repeat="produto in Produtos.items">
+      <div class="card-title" layout="column" layout-align="center center">
+        <h2>{{produto.aparelho ? produto.aparelho.nome : produto.franquia}}</h2>
+        <small>SKU: {{produto.sku}}</small>
+      </div>
+      <div class="card-body" ng-if="produto.aparelho">
+        <md-list>
+            <md-list-item class="secondary-button-padding">
+                <p>Na franquia de <strong>{{produto.franquia}}</strong></p>
+                <span>Por <strong class="font-sz-3">{{produto.valor}}</strong></span>
+              </md-list-item>
+        </md-list>
+        <div class="card-body">
+            <h3 class="font-sz-7 fore-color">R$ {{produto.aparelho.valor}}</h3>
+        </div>
+        <div class="card-footer">
+            <h4 class="font-sz-5">{{produto.aparelho.numeroParcelas}}x 
+                R$ {{produto.aparelho.valorParcela || produto.aparelho.valor}}</h4>
+              <md-button ng-click="Produtos.escolher(plataforma)">Quero este!</md-button>
+        </div>
+      </div>
+      <div class="card-footer" ng-if="!produto.aparelho" layout-align="start center">
+          <h4 class="font-sz-5">R$ {{produto.valor}}</h4>
+          <md-button ng-click="Produtos.escolher(plataforma)" class="md-raised md-warn">Quero este!</md-button>
+      </div>
+    </md-whiteframe>
+    </div>
+</div>

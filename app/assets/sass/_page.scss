@@ -1,0 +1,50 @@
+$module: page;
+
+.#{$module} {
+    position: relative;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    
+    .presentation {
+        width: 100%;
+        background: #fff;
+        color: #222;
+        padding: 30px;
+        .content {
+            padding: 15px;
+            height: 150px;
+            p {
+                text-align: right;
+                margin: 3px 0;
+            }
+            &:not(:last-child) {
+                border-right: 1px solid #222;
+            }
+        }
+    }
+    
+    .#{$module}-header {
+        width: 100%;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        background: -webkit-linear-gradient(130deg, #0dcab7, #2b0a70);
+        background: -moz-linear-gradient(130deg, #0dcab7, #2b0a70);
+         
+    }
+
+    .#{$module}-title {
+        font-size: 48px;
+    } 
+
+    .#{$module}-body {
+        max-width: 1170px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+}
+
+

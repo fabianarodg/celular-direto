@@ -1,0 +1,30 @@
+<div class="page gradient all-center" layout="row" layout-align="center center">
+    <section class="presentation" >
+        <div layout="row" layout-align="center center" flex="80" flex-offset="10">
+            <div  class="content" 
+                flex="33" 
+                layout="column"
+                laytout-align="center center">
+                <p>Teste de seleção para front-end na Wooza</p>
+                <p>Desenvolvido por Fabiana Rodrigues</p>
+            </div>
+            <div class="content" 
+                flex="33" 
+                layout="row"
+                layout-align="center center"><h1 class="page-title">{{Home.title}}</h1></div>
+            <div 
+                class="content" 
+                flex="33" 
+                layout="column"
+                layout-align="center start">
+                <md-list>
+                    <md-list-item ui-sref="produtos({id: plataforma.sku, produto: plataforma.nome})"
+                        data-ng-repeat="plataforma in Home.items">
+                        <p> {{plataforma.nome}} </p>
+                    </md-list-item>
+                </md-list>
+                
+            </div>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,67 @@
+<div class="page" layout="row" layout-sm="column" layout-align="center stretch">
+    <div 
+        class="product gradient" 
+        layout="column" 
+        layout-align="center center"
+        flex-gt-sm="50" 
+        flex="100">
+        <h1 class="font-sz-8">{{Checkout.title}}</h1></div>
+    <div class="form-checkout" 
+        layout="column" 
+        layout-align="center center" 
+        flex-gt-sm="50" 
+        flex="100">
+        <h2>Preencha seus dados</h2>
+        <form name="checkoutForm">
+            <md-input-container class="md-block">
+                <label>Nome</label>
+                <input required 
+                    name="userName" 
+                    type="text"
+                    data-ng-model="Checkout.user.userName" 
+                    data-ng-model-options="{ updateOn: 'blur' }" >
+                <div ng-messages="checkoutForm.userName.$error">
+                    <div ng-message="required">Este campo é obrigatório.</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label>E-mail</label>
+                <input required 
+                    name="userEmail" 
+                    type="email"
+                    data-ng-model="Checkout.user.userEmail" 
+                    data-ng-model-options="{ updateOn: 'blur' }" 
+                    data-ng-pattern="/^.+@.+\..+$/">
+                <div ng-messages="checkoutForm.userEmail.$error">
+                    <div ng-message="required">Este campo é obrigatório.</div>
+                    <div ng-message="pattern">Formato de data inválido.</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label>Data de Nascimento</label>
+                <md-datepicker name="userBirthday" 
+                    data-ng-model="Checkout.user.userBirthday"  />
+                </md-datepicker>
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>CPF</label>
+                <input name="cpf"
+                    data-ng-model="Checkout.user.CPF" 
+                    data-ng-model-options="{ updateOn: 'blur' }" 
+                    data-ng-pattern="/^[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}$/" />
+                <div data-ng-messages="checkoutForm.cpf.$error">
+                    <div data-ng-message="pattern">000.000.000-00 - Formato de CPF inválido.</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Telefone</label>
+                <input name="telefone"
+                    data-ng-model="Checkout.user.telefone"   />
+               
+            </md-input-container>
+            <md-button class="md-raised md-primary"
+                ng-click="Checkout.showData(Checkout.user)" 
+                ng-disabled="checkoutForm.$invalid">Enviar</md-button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+
+$sizes-list: 12px 14px 16px 18px 24px 30px 40px 54px;
+@each $current-size in $sizes-list {
+  $i: index($sizes-list, $current-size);
+  .font-sz-#{$i} { 
+    font-size: $current-size;
+  }
+
+  .icon-#{$i} {
+    font-size: $current-size; 
+    width: $current-size;
+    height: $current-size;
+  }
+}
+
