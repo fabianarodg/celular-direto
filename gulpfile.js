@@ -6,14 +6,6 @@ var gulp = require('gulp')
 
 var buildDir = 'dist';
 
-
-
-var apps = ['bower_components/html5-boilerplate/dist/css/normalize.css',
-            'bower_components/html5-boilerplate/dist/css/main.css',
-            'bower_components/angular-material/angular-material.min.css',
-            'app/modules/checkout/checkout.controller.js'
-];
-
 gulp.task('vendorCSS', function() {
     return gulp.src(apps)
       .pipe(concat('vendor.css'))
